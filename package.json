@@ -1,0 +1,31 @@
+{
+  "name": "coderops-vortex-swirl",
+  "author": "Mister&Prada",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "staging": "vite --mode staging",
+    "production": "vite --mode production",
+    "build": "vite build",
+    "build-dev": "vite build --mode development"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-basic-ssl": "^1.2.0",
+    "gsap": "^3.12.7",
+    "min-signal": "^1.0.2",
+    "normalize-wheel": "^1.0.1",
+    "patch-package": "^8.0.0",
+    "postprocessing": "^6.36.7",
+    "simplex-noise": "^4.0.3",
+    "stats.js": "^0.17.0",
+    "three": "^0.173.0",
+    "tsl-textures": "^1.10.0",
+    "tweakpane": "^4.0.5",
+    "vite": "^5.4.14",
+    "vite-plugin-glsl": "^1.3.1",
+    "vite-plugin-restart": "^0.4.2",
+    "vite-plugin-terminal": "^1.2.0"
+  }
+}

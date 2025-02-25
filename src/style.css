@@ -1,0 +1,277 @@
+*
+{
+    margin: 0;
+    padding: 0;
+
+    -ms-touch-action: none;
+    touch-action: none;
+
+    /* Disable selection */
+    -webkit-user-select: none; /* Safari */
+    -ms-user-select: none; /* IE 10 and IE 11 */
+    user-select: none; /* Standard syntax */
+}
+
+html,
+body
+{
+    overflow: hidden;
+    background-color: black;
+}
+
+.webgl
+{
+    position: fixed;
+    top: 0;
+    left: 0;
+    outline: none;
+}
+
+/********************* Debug Panel *********************/
+
+#debug-panel
+{
+    position: fixed;
+    right: 0;
+    z-index: 10000999;
+}
+
+/********************* End Debug Panel *********************/
+
+/********************* Gizmo *********************/
+gizmo-helper {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    z-index: 100000;
+}
+
+gizmo-helper:hover {
+    background: rgba(255, 255, 255, .2);
+    border-radius: 100%;
+    cursor: pointer;
+}
+/********************* End Gizmo *********************/
+
+#preloader {
+    z-index: 99999999;
+    width: 100%;
+    height: 100%;
+    display: block;
+    position: absolute;
+}
+
+
+/******************** Coderops ********************/
+*,
+*::after,
+*::before {
+    box-sizing: border-box;
+}
+
+:root {
+    font-size: 12px;
+    --color-text: #fff;
+    --color-bg: #000;
+    --color-link: #fff;
+    --color-link-hover: #fff;
+    --page-padding: 1.5rem;
+}
+
+body {
+    margin: 0;
+    color: var(--color-text);
+    background-color: var(--color-bg);
+    font-family: ui-monospace, monospace;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+@media (scripting: enabled) {
+    .loading {
+
+        &::before,
+        &::after {
+            content: '';
+            position: fixed;
+            z-index: 10000;
+        }
+
+        &::before {
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: var(--color-bg);
+        }
+
+        &::after {
+            top: 50%;
+            left: 50%;
+            width: 100px;
+            height: 1px;
+            margin: 0 0 0 -50px;
+            background: var(--color-link);
+            animation: loaderAnim 1.5s ease-in-out infinite alternate forwards;
+        }
+
+        @keyframes loaderAnim {
+            0% {
+                transform: scaleX(0);
+                transform-origin: 0% 50%;
+            }
+
+            50% {
+                transform: scaleX(1);
+                transform-origin: 0% 50%;
+            }
+
+            50.1% {
+                transform: scaleX(1);
+                transform-origin: 100% 50%;
+            }
+
+            100% {
+                transform: scaleX(0);
+                transform-origin: 100% 50%;
+            }
+        }
+    }
+}
+
+a {
+    text-decoration: none;
+    color: var(--color-link);
+    outline: none;
+    cursor: pointer;
+
+    &:hover {
+        text-decoration: underline;
+        color: var(--color-link-hover);
+    }
+
+    &:focus {
+        outline: none;
+        background: lightgrey;
+
+        &:not(:focus-visible) {
+            background: transparent;
+        }
+
+        &:focus-visible {
+            outline: 2px solid red;
+            background: transparent;
+        }
+    }
+}
+
+.frame {
+    padding: 3rem var(--page-padding) 0;
+    display: grid;
+    z-index: 1000;
+    position: relative;
+    grid-row-gap: 1rem;
+    grid-column-gap: 2rem;
+    pointer-events: none;
+    justify-items: start;
+    grid-template-columns: auto auto;
+    grid-template-areas:
+    'title'
+    'back'
+    'archive'
+    'github'
+    'demos'
+    'tags'
+    'sponsor';
+
+    #cdawrap {
+        justify-self: start;
+        grid-area: sponsor;
+    }
+
+    a,
+    button {
+        pointer-events: auto;
+    }
+
+    .frame__title {
+        grid-area: title;
+        font-size: inherit;
+        margin: 0;
+    }
+
+    .frame__back {
+        grid-area: back;
+        justify-self: start;
+    }
+
+    .frame__archive {
+        grid-area: archive;
+        justify-self: start;
+    }
+
+    .frame__github {
+        grid-area: github;
+    }
+
+    .frame__tags {
+        grid-area: tags;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 1rem;
+    }
+
+    .frame__demos {
+        grid-area: demos;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 1rem;
+    }
+
+    @media screen and (min-width: 53em) {
+        padding: var(--page-padding);
+        height: 100%;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        grid-template-columns: auto auto auto auto 1fr;
+        grid-template-rows: auto auto;
+        align-content: space-between;
+        grid-template-areas:
+      'title back github archive demos'
+      'tags tags tags sponsor sponsor';
+
+        .frame__tags {
+            align-self: end;
+        }
+
+        .frame__demos,
+        #cdawrap {
+            justify-self: end;
+            text-align: right;
+            max-width: 300px;
+        }
+    }
+}
+
+.content {
+    padding: var(--page-padding);
+    display: flex;
+    flex-direction: column;
+    width: 100vw;
+    position: relative;
+
+    @media screen and (min-width: 53em) {
+        min-height: 100vh;
+        justify-content: center;
+        align-items: center;
+    }
+}
+
+main {
+    position: fixed;
+    display: none;
+    z-index: 9999;
+    pointer-events: none;
+}
