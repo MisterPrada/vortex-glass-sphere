@@ -18,6 +18,8 @@ npm run dev
 
 - Ref Shader Swirl - [cmzw](https://x.com/cmzw_)
 - EnvMap - [rogland_clear_night](https://polyhaven.com/a/rogland_clear_night)
+- Bruno Simon (Teacher) - [Twitter](https://x.com/bruno_simon)
+- The company I work for - [EgorovAgency](https://egorovagency.com)
 
 ## Misc
 
