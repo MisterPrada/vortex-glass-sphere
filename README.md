@@ -1,33 +1,27 @@
-*How to use this template:*
+# Vortex in a Glass Sphere
 
-- Styles for the demo go in css/base.css
-- Add build instructions and credits to the README.md
-- For writing the tutorial, take a look at https://github.com/crnacura/CodropsTemplate/wiki/Writing-the-article
-- Delete this 'how to' intro in the final version and leave the following (fill in title/description, credits and social links of your likings, we'll do the rest):
+## A step-by-step process for building a procedural vortex enclosed in a glass sphere using Three.js Shader Language (TSL). Covers the creation of a 2D shader, texture effects, transition to particles, and the addition of a glass material with realistic lighting effects. By combining mathematical transformations, fractal noise, and physical materials, the result is a dynamic and mesmerizing visual effect. 🚀✨
 
--------
+![Demo](https://github.com/user-attachments/assets/3cf59d30-50e8-444d-bc4f-06a2f96450f9)
 
-# Title of the demo
-
-*A description of the demo goes here.*
-
-![Image Title](https://generative-placeholders.glitch.me/image?width=800&height=600")
-
-[Article on Codrops](https://tympanus.net/codrops/?p=)
+[Article on Codrops](https://tympanus.net/codrops/?p=88757)
 
 [Demo](https://tympanus.net/Development/.../)
 
-## Installation
-
-Run this demo on a [local server](https://developer.mozilla.org/en-US/docs/Learn/Common_questions/Tools_and_setup/set_up_a_local_testing_server).
+## Installation and Run
+```
+npm i
+npm run dev
+```
 
 ## Credits
 
-- Images generated with [Midjourney](https://midjourney.com)
+- Ref Shader Swirl - [cmzw](https://x.com/cmzw_)
+- EnvMap - [rogland_clear_night](https://polyhaven.com/a/rogland_clear_night)
 
 ## Misc
 
-Follow *Author*: [Twitter](), [Instagram](), [GitHub]() ...
+Follow *Author*: [Twitter](https://x.com/Mister_Prada), [Instagram](https://www.instagram.com/mister666prada), [GitHub](https://github.com/MisterPrada)
 
 Follow Codrops: [Bluesky](https://bsky.app/profile/codrops.bsky.social), [Facebook](http://www.facebook.com/codrops), [GitHub](https://github.com/codrops), [Instagram](https://www.instagram.com/codropsss/), [X](http://www.x.com/codrops)
 
