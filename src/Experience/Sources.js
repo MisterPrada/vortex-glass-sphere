@@ -29,7 +29,7 @@ export default [
         name: 'displacementTexture',
         type: 'texture',
         obfuscate: true,
-        path: '/textures/displacement.jpg',
+        path: './textures/displacement.jpg',
         meta: {
             "type": "texture"
         }
@@ -38,7 +38,7 @@ export default [
         name: 'gradientTexture',
         type: 'texture',
         obfuscate: true,
-        path: '/textures/background.png',
+        path: './textures/background.png',
         meta: {
             "type": "texture"
         }
@@ -47,7 +47,7 @@ export default [
         name: 'hdriTexture',
         type: 'rgbeTexture',
         obfuscate: true,
-        path: '/textures/hdri/rogland_clear_night_1k.hdr',
+        path: './textures/hdri/rogland_clear_night_1k.hdr',
         meta: {
             "type": "rgbeTexture"
         }
